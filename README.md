@@ -19,17 +19,17 @@ Le fichier config.sh permet égamelement de configurer Jarvis afin qu'il lise le
 
 ## Usage
 ```
-You: Quels sont les actualités du jour ?
-Jarvis: Les actualités pour aujourd'hui sont :
+You: Quels sont les actualites du jour ?
+Jarvis: Les actualites pour aujourd hui sont :
 Jarvis: Rubrique sciences
-Jarvis: Jarvis, l'assistant vocal open source qu'il vous faut pour votre domotique
+Jarvis: Jarvis, l'assistant vocal open source qu il vous faut pour votre domotique
 Jarvis:
 Jarvis: Rubrique politique
 Jarvis: on nous aurait menti!
 You: Donne moi la liste des rubriques
 Jarvis: il y a 12 rubriques : internationale, etc ...
-You: quels sont les actualité de la rubrique science
-Jarvis: Les actualités de la rubrique science sont :
+You: quels sont les actualites de la rubrique science
+Jarvis: Les actualites de la rubrique science sont :
 Jarvis: ********
 ```
 
