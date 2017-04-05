@@ -46,26 +46,30 @@ def news() :
     lines = file.readlines()
     file.close()
 
-    print (line)
     rubrique = getRubrique(line)
-    print(rubrique)
     if rubrique != "non reconnu" :
         reply = "Les actualités concernant la rubrique " + rubrique + " sont :\n\n"
         
         res = requests.get("http://www.lemonde.fr/" + rubrique + "/rss_full.xml")
         doc = lxml.etree.fromstring(res.content)
-                
+        
+        items = False
         for item in doc.xpath('//item') :
             myDate = item.find('pubDate').text
             if myDate[0:2] == date.today().ctime()[0:2] :
+                items = True
                 reply += item.find('title').text.encode('utf-8') + "\n"
                 line = lines[18]
                 if line[len(line)-6:len(line)-2] == "True" :
                     reply += item.find('description').text.encode('utf-8') + "\n"
+        if items == False :
+            reply += "Pas d'actualistés aujourd'hui"
+     
+    else :
+        reply = "Il n'y a pas de rubrique " + rubrique
         
-            
-        file = open(PLUGIN_PATH + "/python/news.txt", "w")
-        file.write(reply)
-        file.close
+    file = open(PLUGIN_PATH + "/python/news.txt", "w")
+    file.write(reply)
+    file.close
 
 news()
