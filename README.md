@@ -15,7 +15,7 @@ Seul la rubrique demande sera lu par Jarvis
 
 
 Le fichier config.sh permet égamelement de configurer Jarvis afin qu'il lise les description ou non des actualite
-(le fait de lire les descriptif peut etre assez lourd et long)
+(Le fait de lire les descriptif peut etre assez lourd et long)
 
 ## Usage
 ```
