@@ -4,23 +4,23 @@
 - module Requests
 
 ## Description
-Permet de récupérer les actualités du site 'Le Monde.fr' et de les faire dire par Jarvis
+Permet de rÃ©cupÃ©rer les actualitÃ©s du site 'Le Monde.fr' et de les faire dire par Jarvis
 
-Il y a deux modes de lecture des actualités
- -1) Mode général
-La lecture se fera en fonction des rubriques qui ont été activées dans le fichier config.sh
+Il y a deux modes de lecture des actualitÃ©s
+ -1) Mode gÃ©nÃ©ral
+La lecture se fera en fonction des rubriques qui ont Ã©tÃ© activÃ©es dans le fichier config.sh
 
  -2) Mode rubrique
-Seul la rubrique demandé sera lu par Jarvis
+Seul la rubrique demandÃ© sera lu par Jarvis
 
 
-Le fichier config.sh permet égamelement de configurer Jarvis afin qu'il lise les description ou non des actualité
-(Le fait de lire les descriptif peut être assez lourd et long)
+Le fichier config.sh permet Ã©gamelement de configurer Jarvis afin qu'il lise les description ou non des actualitÃ©
+(le fait de lire les descriptif peut Ãªtre assez lourd et long)
 
 ## Usage
 ```
-You: Quels sont les actualités du jour ?
-Jarvis: Les actualités pour aujourd'hui sont :
+You: Quels sont les actualitÃ©s du jour ?
+Jarvis: Les actualitÃ©s pour aujourd'hui sont :
 Jarvis: Rubrique sciences
 Jarvis: Jarvis, l'assistant vocal open source qu'il vous faut pour votre domotique
 Jarvis:
@@ -28,8 +28,8 @@ Jarvis: Rubrique politique
 Jarvis: on nous aurait menti!
 You: Donne moi la liste des rubriques
 Jarvis: il y a 12 rubriques : internationale, etc ...
-You: quels sont les actualité de la rubrique science
-Jarvis: Les actualités de la rubrique science sont :
+You: quels sont les actualitÃ© de la rubrique science
+Jarvis: Les actualitÃ©s de la rubrique science sont :
 Jarvis: ********
 
 ```
