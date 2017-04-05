@@ -30,7 +30,7 @@ You: Donne moi la liste des rubriques
 Jarvis: il y a 12 rubriques : internationale, etc ...
 You: quels sont les actualites de la rubrique science
 Jarvis: Les actualites de la rubrique science sont :
-Jarvis: ********
+Jarvis: *******
 ```
 
 ## Author
