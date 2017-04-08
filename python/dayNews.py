@@ -27,6 +27,7 @@ def dayNews() :
 
     reply = "Les actualités pour aujourd'hui sont :\n\n"
     i = 0
+    nbr = 0
     while i < len(nomRubrique) :
         rubriqueOk = False
         if lireRubrique[i] == 1 :
@@ -36,6 +37,7 @@ def dayNews() :
             for item in doc.xpath('//item') :
                 myDate = item.find('pubDate').text
                 if myDate[0:2] == date.today().ctime()[0:2] :
+                    nbr += 1
                     if rubriqueOk == False :
                         reply += "Rubrique " + nomRubrique[i] + ":\n\n"
                     rubriqueOk = True
@@ -44,6 +46,9 @@ def dayNews() :
                     if line[len(line)-6:len(line)-2] == "True" :
                         reply += item.find('description').text.encode('utf-8') + "\n\n"
         i += 1
+
+    if nbr == 0 :
+        reply = "Il n'y a aucune actualités aujourd'hui.\n"
         
     file = open(PLUGIN_PATH + "/python/news.txt", "w")
     file.write(reply)

@@ -4,8 +4,8 @@ import lxml.html
 import requests
 from datetime import date
 
-PLUGIN_PATH = os.getcwd() + "/plugins/jarvis-leMonde"
 
+PLUGIN_PATH = os.getcwd() + "/plugins/jarvis-leMonde"
 
 def getRubrique(rubrique) :
     if rubrique == "international" or rubrique == "national" :
@@ -34,8 +34,9 @@ def getRubrique(rubrique) :
         return "m-le-mag"
     else :
         return "non reconnu"
-        
-def news() :
+
+
+def addFavoriteNews() :
     file = open(PLUGIN_PATH + "/python/rubrique.txt")
     line = file.readline()
     line = line[0:len(line)-1]
@@ -49,28 +50,30 @@ def news() :
     reply = ""
     rubrique = getRubrique(line)
     if rubrique != "non reconnu" :
-        reply = "Les actualités concernant la rubrique " + rubrique + " sont :\n\n"
-        
-        res = requests.get("http://www.lemonde.fr/" + rubrique + "/rss_full.xml")
-        doc = lxml.etree.fromstring(res.content)
-        
-        items = False
-        for item in doc.xpath('//item') :
-            myDate = item.find('pubDate').text
-            if myDate[0:2] == date.today().ctime()[0:2] :
-                items = True
-                reply += item.find('title').text.encode('utf-8') + "\n"
-                line = lines[18]
-                if line[len(line)-6:len(line)-2] == "True" :
-                    reply += item.find('description').text.encode('utf-8') + "\n"
-        if items == False :
-            reply += "Pas d'actualistés aujourd'hui.\n"
-     
+        i = 0
+        while i < len(lines) :
+            l = lines[i]
+            if l[0:len(rubrique) +11] == "jv_leMonde_" + rubrique :
+                lines[i] = 'jv_leMonde_' + rubrique + '="True"\n'
+
+            i += 1
+
+        newLines = ""
+        for l in lines :
+            newLines += l
+
+        file = open(PLUGIN_PATH + "/config.sh", "w")
+        file.write(newLines)
+        file.close()
+
+        reply = "La rubrique " + rubrique + u" à bien été ajoutées\n"    
     else :
         reply = "Il n'y a pas de rubrique " + line + "\n"
-        
-    file = open(PLUGIN_PATH + "/python/news.txt", "w")
-    file.write(reply)
-    file.close
 
-news()
+    file = open(PLUGIN_PATH + "/python/rubrique.txt", "w")
+    file.write(reply.encode('utf-8'))
+    file.close()
+
+
+
+addFavoriteNews()
