@@ -13,7 +13,7 @@ jv_leMonde_sport="False"
 jv_leMonde_sciences="False"
 jv_leMonde_pixels="False"
 jv_leMonde_campus="False"
-jv_leMonde_m-le-mag="False"
+jv_leMonde_m_le_mag="False"
 
 #Mettez à True si vous voulez que Jarvis lise une description pour chaque actualité (donne beaucoup d'information à lire)
 jv_leMonde_LireDescription="False"
