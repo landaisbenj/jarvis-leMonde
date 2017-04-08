@@ -19,7 +19,7 @@ file.close()
 
 def dayNews() :
     i = 4
-    while i < len(lines) :
+    while i < 16 :
         line = lines[i]
         if line[len(line)-6:len(line)-2] == "True" :
             lireRubrique[i-4] = 1
