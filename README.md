@@ -1,3 +1,13 @@
+## Mise à jour
+Vous pouvez désormais lister les rubriques 'suivie' (avec le parametre ="True") et modifier le fichier 'config.sh' en vocal.
+Trois nouvelle commandes ont donc été  ajoutées :
+ - Liste des rubriques favorites
+ Vous donnera la liste des rubriques avec le parametre 'True'
+ - Ajoute aux favories la rubrique sciences
+ Passera la variable jv_leMonde_sciences à 'True'
+ - Enleve des favories la rubrique politique
+ Passera la variable jv_leMonde_politique à 'False'
+
 ## Dependance
 - python 3
 - module lxml
