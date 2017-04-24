@@ -4,7 +4,7 @@ import lxml.html
 import requests
 from datetime import date
 
-PLUGIN_PATH = os.getcwd() + "/plugins/jarvis-leMonde"
+PLUGIN_PATH = os.getcwd() + "/plugins_installed/jarvis-leMonde"
 
 
 def getRubrique(rubrique) :
