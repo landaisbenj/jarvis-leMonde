@@ -1,6 +1,6 @@
-*ACTUALITE*JOUR*==echo "" > ~/jarvis/plugins/jarvis-leMonde/python/news.txt && jv_leMonde_dayNews
-*ACTUALITE*BRIQUE (*)== echo "(1)" > ~/jarvis/plugins/jarvis-leMonde/python/rubrique.txt && jv_leMonde_news
-*AJOUTE*FAVORI*BRIQUE (*)== echo "(1)" > ~/jarvis/plugins/jarvis-leMonde/python/rubrique.txt && jv_leMonde_addFavoriteNews
-*ENLEVE*FAVORI*BRIQUE (*)|*RETIR*FAVORI*BRIQUE (*)== echo "(1)" > ~/jarvis/plugins/jarvis-leMonde/python/rubrique.txt && jv_leMonde_removeFavoriteNews
+*ACTUALITE*JOUR*==echo "" > ~/jarvis/plugins_installed/jarvis-leMonde/python/news.txt && jv_leMonde_dayNews
+*ACTUALITE*BRIQUE (*)== echo "(1)" > ~/jarvis/plugins_installed/jarvis-leMonde/python/rubrique.txt && jv_leMonde_news
+*AJOUTE*FAVORI*BRIQUE (*)== echo "(1)" > ~/jarvis/plugins_installed/jarvis-leMonde/python/rubrique.txt && jv_leMonde_addFavoriteNews
+*ENLEVE*FAVORI*BRIQUE (*)|*RETIR*FAVORI*BRIQUE (*)== echo "(1)" > ~/jarvis/plugins_installed/jarvis-leMonde/python/rubrique.txt && jv_leMonde_removeFavoriteNews
 *LIST*BRIQUE*FAVORI*== jv_leMonde_favoriteNews
 *LIST*BRIQUE*==say "Il y à 12 rubriques : international, politique, société, économique, culture, idées, planète, sport, sciences, pixels, campus, le mag."
