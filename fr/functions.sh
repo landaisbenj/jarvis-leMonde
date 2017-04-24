@@ -18,45 +18,45 @@
 
 jv_leMonde_dayNews()
 {
-	python -u ~/jarvis/plugins/jarvis-leMonde/python/dayNews.py
+	python -u ~/jarvis/plugins_installed/jarvis-leMonde/python/dayNews.py
 	while read line
 	do
 		say "$line"
-	done < ~/jarvis/plugins/jarvis-leMonde/python/news.txt
+	done < ~/jarvis/plugins_installed/jarvis-leMonde/python/news.txt
 }
 
 jv_leMonde_news()
 {
-	python -u ~/jarvis/plugins/jarvis-leMonde/python/news.py
+	python -u ~/jarvis/plugins_installed/jarvis-leMonde/python/news.py
 	while read line
 	do
 		say "$line"
-	done < ~/jarvis/plugins/jarvis-leMonde/python/news.txt
+	done < ~/jarvis/plugins_installed/jarvis-leMonde/python/news.txt
 }
 
 jv_leMonde_favoriteNews()
 {
-	python -u ~/jarvis/plugins/jarvis-leMonde/python/favoriteNews.py
+	python -u ~/jarvis/plugins_installed/jarvis-leMonde/python/favoriteNews.py
 	while read line
 	do
 		say "$line"
-	done < ~/jarvis/plugins/jarvis-leMonde/python/favoriteNews.txt
+	done < ~/jarvis/plugins_installed/jarvis-leMonde/python/favoriteNews.txt
 }
 
 jv_leMonde_addFavoriteNews()
 {
-	python -u ~/jarvis/plugins/jarvis-leMonde/python/addFavoriteNews.py
+	python -u ~/jarvis/plugins_installed/jarvis-leMonde/python/addFavoriteNews.py
 	while read line
 	do
 		say "$line"
-	done < ~/jarvis/plugins/jarvis-leMonde/python/rubrique.txt
+	done < ~/jarvis/plugins_installed/jarvis-leMonde/python/rubrique.txt
 }
 
 jv_leMonde_removeFavoriteNews()
 {
-	python -u ~/jarvis/plugins/jarvis-leMonde/python/removeFavoriteNews.py
+	python -u ~/jarvis/plugins_installed/jarvis-leMonde/python/removeFavoriteNews.py
 	while read line
 	do
 		say "$line"
-	done < ~/jarvis/plugins/jarvis-leMonde/python/rubrique.txt
+	done < ~/jarvis/plugins_installed/jarvis-leMonde/python/rubrique.txt
 }
