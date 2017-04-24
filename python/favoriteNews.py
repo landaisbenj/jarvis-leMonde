@@ -5,7 +5,7 @@ import requests
 from datetime import date
 
 
-PLUGIN_PATH = os.getcwd() + "/plugins/jarvis-leMonde"
+PLUGIN_PATH = os.getcwd() + "/plugins_installed/jarvis-leMonde"
 
 nomRubrique = ["international","politique","societe","economie","culture","idees",
             "planete","sport","sciences","pixels","campus","m-le-mag"]
